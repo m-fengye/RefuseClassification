@@ -1,0 +1,37 @@
+<!--pages/index/index.wxml-->
+<view class='body'>
+  <view class='top'>
+
+  </view>
+  <view class='mid'>
+    <text class='Question'>{{Question+1}}、【<text>{{Good}}</text>】属于什么垃圾？</text>
+    <view class='layer-1'>
+      <view hover-class='view-hover' hover-stay-time='100'>
+        <image src='/imgs/img-1.png' bindtap='ClickImage' data-answer='干垃圾' mode="widthFix"></image>
+      </view>
+      <view hover-class='view-hover' hover-stay-time='100'>
+        <image src='/imgs/img-2.png' bindtap='ClickImage' data-answer='湿垃圾' mode="widthFix"></image>
+      </view>
+    </view>
+    <view class='layer-2'>
+      <view hover-class='view-hover' hover-stay-time='100'>
+        <image src='/imgs/img-3.png' bindtap='ClickImage' data-answer='可回收物' mode="widthFix"></image>
+      </view>
+      <view hover-class='view-hover' hover-stay-time='100'>
+        <image src='/imgs/img-4.png' bindtap='ClickImage' data-answer='有害垃圾' mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 规则提示 -->
+  <view class="ruleZhezhao {{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+    <view class='ruleZhezhaoContent'>
+      <view class='ruleZhezhaoText' wx:for='{{GoodsAndAnswers}}' wx:key='Good'>
+        <text>{{index+1}}</text>
+        <text>{{item.Good}}</text>
+        <text class="{{item.Answer==UserAnswers[index]?'default':'error'}}">{{item.Answer}}</text>
+      </view>
+      <button bindtap='RePlay'>再来一次</button>
+    </view>
+  </view>
+  <!-- end -->
+</view>

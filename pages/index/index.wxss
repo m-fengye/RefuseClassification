@@ -1,0 +1,114 @@
+/* pages/index/index.wxss */
+page{
+  background-color: #fefefe;
+}
+.mid{
+  margin: 0 5%;
+}
+.Question{
+  color: #333;
+  margin: 30rpx 5%;
+  display: block;
+}
+.Question text{
+  color: red;
+}
+.mid image{
+  width: 100%;
+}
+.layer-1 view{
+  float: left;
+  margin: 2%;
+  width: 46%;
+}
+.layer-2 view{
+  float: left;
+  margin: 2%;
+  width: 46%;
+}
+.view-hover{
+    opacity: 0.9;
+    transform: scale(0.98,0.98); /*缩放*/
+}
+
+/* 规则提示层 */
+.isRuleShow{
+  display: block;
+}
+.isRuleHide{
+  display: none;
+}
+.ruleZhezhao{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color:rgba(0, 0, 0, .5);
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.ruleZhezhaoContent{
+  padding: 20rpx 0;
+  width: 80%;
+  background: #e1d2b1;
+  margin: 5% auto;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.ruleZhezhaoText{
+  width: 80%;
+  font-size: 30rpx;
+  color: #856d5f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 12rpx 0;
+}
+.ruleZhezhaoText text:nth-child(1){
+  color: #fff;
+  font-size: 40rpx;
+  height: 60rpx;
+  width: 60rpx;
+  background: #664a2c;
+  display: block;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  margin-right: 10rpx;
+}
+.ruleZhezhaoText text:nth-child(2){
+  flex-wrap:wrap;
+  width: 60%;
+}
+.ruleHide{
+  height: 60rpx!important;
+  width: 60rpx!important;
+  position: absolute;
+  top: -20rpx;
+  right: -20rpx;
+}
+.rule{
+  display: block;
+  border: 1px solid #fff;
+  width: 100rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  height: 60rpx;
+  font-size: 30rpx;
+  border-radius: 30rpx;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+.default{
+  color:#856d5f;
+}
+.error{
+  color:#f00;
+}
+/* end */
